@@ -8,6 +8,7 @@ import "src/LockManager_Timelock.sol";
 import "src/TokenVault.sol";
 import "src/FNFTHandler.sol";
 import "src/MetadataHandler.sol";
+import "src/Controller.sol";
 
 interface ICREATE3Factory {
     /// @notice Deploys a contract using CREATE3
@@ -60,13 +61,17 @@ contract RevestV2_deployment is Script {
         bytes memory Revest_721_creationCode = abi.encodePacked(
             type(Revest_721).creationCode, abi.encode(WETH, tokenVault, metadataHandler, govController)
         );
-        
+
         address revest_721 = factory.deploy(keccak256(abi.encode("Revest_721")), Revest_721_creationCode);
 
         address handler = address(Revest_1155(payable(revest_1155)).fnftHandler());
 
-        vm.stopBroadcast();
+        // Consorcio contract
+        Controller controller = new Controller(WETH, tokenVault, metadataHandler, govController);
+        
 
+        vm.stopBroadcast();
+        //console.log("controller: %s", controller);
         console.log("Token Vault: %s: ", tokenVault);
         console.log("Lock Manager Timelock: %s: ", lockManager_timelock);
         console.log("Metadata Handler: %s: ", metadataHandler);
