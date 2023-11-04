@@ -40,6 +40,9 @@ async function main() {
     const amount = 1;
     const result = await controllerContract.mintAddressLock("0xab", recipients, [amount], amount, config);
     console.log('result', result);
+
+
+    
 }
 
 // We recommend this pattern to be able to use async/await everywhere
