@@ -40,6 +40,7 @@ contract RevestV2_deployment is Script {
 
         //Deploy TokenVault
         address tokenVault = factory.deploy(keccak256(abi.encode("TokenVault")), type(TokenVault).creationCode);
+        console.log("tokenVault", address(tokenVault));
 
         //Deploy Lock Manager Timelock Contract
         bytes memory lockManager_creationCode =
@@ -71,12 +72,13 @@ contract RevestV2_deployment is Script {
         
 
         vm.stopBroadcast();
-        //console.log("controller: %s", controller);
+        
         console.log("Token Vault: %s: ", tokenVault);
         console.log("Lock Manager Timelock: %s: ", lockManager_timelock);
         console.log("Metadata Handler: %s: ", metadataHandler);
         console.log("Revest 1155: %s: ", revest_1155);
         console.log("Revest 721: %s: ", revest_721);
         console.log("FNFT Handler: %s: ", handler);
+        console.log("controller: %s", address(controller));
     }
 }

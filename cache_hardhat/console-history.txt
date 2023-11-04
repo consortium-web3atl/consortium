@@ -1,0 +1,17 @@
+tokenVaultArt.deployedLinkReferences
+const tokenVaultArt = await hre.artifacts.readArtifactSync("TokenVault");
+await hre.artifacts.readArtifactSync("TokenVault")
+await hre.ethers.getContractAtFromArtifact(tokenVaultArt,"0x1eC5DF6299467Fb19b4e425eb47DF46C8f245077");
+tokenVaultCon.getFunction()
+tokenVaultCon.getEvent()
+tokenVaultCon.getEvent
+const tokenVaultCon = await hre.ethers.getContractAtFromArtifact(tokenVaultArt,"0x1eC5DF6299467Fb19b4e425eb47DF46C8f245078");
+await hre.ethers.getContractAtFromArtifact(tokenVaultArt,"0x1eC5DF6299467Fb19b4e425eb47DF46C8f245078");
+hre.ethers.getContractAtFromArtifact(tokenVaultArt,"0x1eC5DF6299467Fb19b4e425eb47DF46C8f245078");
+const tokenVaultArt = hre.artifacts.readArtifactSync("TokenVault")
+hre.ethers.getContractAtFromArtifact(tokenVaultArt,"0x1eC5DF6299467Fb19b4e425eb47DF46C8f245078");
+const tokenVault = hre.artifacts.readArtifactSync("TokenVault")
+hre.artifacts.readArtifactSync("TokenVault")
+await hre.ethers.getContractAtFromArtifact("Controller")
+await hre.artifacts.getAllFullyQualifiedNames()
+hre.artifacts.getAllFullyQualifiedNames()

@@ -6,4 +6,8 @@ contract Controller is Revest_721 {
      constructor(address weth, address _tokenVault, address _metadataHandler, address govController)
         Revest_721(weth, _tokenVault, _metadataHandler, govController)
     {}
+
+    function mintTimeLock() external {
+        
+    }
 }

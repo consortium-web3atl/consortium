@@ -8,7 +8,7 @@ import { ITokenVault } from "./interfaces/ITokenVault.sol";
 
 import { Clones } from "@openzeppelin/contracts/proxy/Clones.sol";
 import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
-import { ReentrancyGuard } from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 /**
  * @title TokenVault

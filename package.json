@@ -1,0 +1,32 @@
+{
+  "name": "consortio",
+  "version": "1.0.0",
+  "description": "## How to deploy Revest contracts using Foundry",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/consortium-web3atl/consortium.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/consortium-web3atl/consortium/issues"
+  },
+  "homepage": "https://github.com/consortium-web3atl/consortium#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.19.0",
+    "hardhat-deploy": "^0.11.43",
+    "hardhat-preprocessor": "^0.1.5",
+    "typescript": "^5.2.2"
+  }
+}

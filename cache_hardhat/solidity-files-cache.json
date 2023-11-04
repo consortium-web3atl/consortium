@@ -1,0 +1,2920 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/gabrielfior/code/RevestV2-Public/src/Consortio.sol": {
+      "lastModificationDate": 1699124792727,
+      "contentHash": "431bd66c5597b21357fafd9431c1fd09",
+      "sourceName": "src/Consortio.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Consortio"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1699124752593,
+      "contentHash": "1f0554f4de16bd4df3c40c85c4fa340a",
+      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "391d96ad3b699ec494f1a69f77cdf3f7",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../extensions/IERC20Permit.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1699124752593,
+      "contentHash": "a0a7fcf8086974cfb15e0521ab6447df",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "ec06e73024a8f259b22f10df38a5dbf6",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "8d9b58c19b8cb5bc11c13a857a6dcf81",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "28c8028aeb4076b71466533a3957fc37",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/MetadataHandler.sol": {
+      "lastModificationDate": 1699046656347,
+      "contentHash": "942d478469e29e1d846a8a2904f10eb1",
+      "sourceName": "src/MetadataHandler.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol",
+        "@openzeppelin/contracts/utils/Base64.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "./interfaces/IMetadataHandler.sol",
+        "./interfaces/ILockManager.sol",
+        "./interfaces/IRevest.sol",
+        "./interfaces/ILockManager.sol",
+        "forge-std/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MetadataHandler"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/interfaces/IMetadataHandler.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "ef231b213650ccb2c7c1c9ffdb936e9b",
+      "sourceName": "src/interfaces/IMetadataHandler.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IMetadataHandler"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/interfaces/ILockManager.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "139130a65bb52fbf0167e3d2f35f6927",
+      "sourceName": "src/interfaces/ILockManager.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IRevest.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ILockManager"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/interfaces/IRevest.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "16402192dd5135ab65130bb28892808e",
+      "sourceName": "src/interfaces/IRevest.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IController.sol",
+        "./IAllowanceTransfer.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.12"
+      ],
+      "artifacts": [
+        "IRevest"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/forge-std/src/console.sol": {
+      "lastModificationDate": 1699043423407,
+      "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
+      "sourceName": "forge-std/console.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/Base64.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "6cd47ec65adb59f4c3c8edc5b5a0002a",
+      "sourceName": "@openzeppelin/contracts/utils/Base64.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Base64"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "69d95862d48c81d98baf71c42ac5ab51",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol",
+        "./math/SignedMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "5c84c964279c7560bf5baab06cc6e898",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ERC165Checker"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/interfaces/IController.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "52c7f7ed503d6a9c916b95e5c3ad2c58",
+      "sourceName": "src/interfaces/IController.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./ILockManager.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.12"
+      ],
+      "artifacts": [
+        "IController"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/interfaces/IAllowanceTransfer.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "103a28d304059c339878684b8667b0cb",
+      "sourceName": "src/interfaces/IAllowanceTransfer.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "IAllowanceTransfer"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "0e0a174761ec04cecc398c1cba0d1a88",
+      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "SignedMath"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "728f1fecf7e90ca3687477ac6497a760",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "7b993c72b0cd067d32f49b745137a2cb",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155Receiver.sol": {
+      "lastModificationDate": 1699124752593,
+      "contentHash": "8c192ef6a231bc27f3b81bcd09659929",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC1155Receiver"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Holder.sol": {
+      "lastModificationDate": 1699124752593,
+      "contentHash": "e44ad6a0bcfbb3ee97392db25344343c",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../../../utils/introspection/ERC165.sol",
+        "../IERC1155Receiver.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ERC1155Holder"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "5fa7964ad06c705f7fea435a672a3714",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol": {
+      "lastModificationDate": 1699124752593,
+      "contentHash": "8e8f90bb810681a397bc65272924c5d3",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC1155.sol",
+        "./IERC1155Receiver.sol",
+        "./extensions/IERC1155MetadataURI.sol",
+        "../../utils/Context.sol",
+        "../../utils/introspection/ERC165.sol",
+        "../../utils/Arrays.sol",
+        "../../interfaces/draft-IERC6093.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ERC1155"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol": {
+      "lastModificationDate": 1699124752593,
+      "contentHash": "164c3a4da222bf2d8471a0e0f21ce1ba",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC1155"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "60e42aac9f34cccee5620051518cc8ab",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC6093.sol": {
+      "lastModificationDate": 1699124752590,
+      "contentHash": "0850a395eb2daa19d891c60fcb8fb9bf",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC1155Errors",
+        "IERC20Errors",
+        "IERC721Errors"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/Arrays.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "a416f0c9dce7163b90cf2e385f58ec2c",
+      "sourceName": "@openzeppelin/contracts/utils/Arrays.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./StorageSlot.sol",
+        "./math/Math.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Arrays"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol": {
+      "lastModificationDate": 1699124752593,
+      "contentHash": "be2ee634fafd189c0453d899168db318",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../IERC1155.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC1155MetadataURI"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "11f9520ad7dfee75a24725ac373490be",
+      "sourceName": "@openzeppelin/contracts/utils/StorageSlot.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "StorageSlot"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/interfaces/IFNFTHandler.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "dc94ba1b6807a8ab12214ff2ca33c53b",
+      "sourceName": "src/interfaces/IFNFTHandler.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
+        "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+        "@openzeppelin/contracts/access/IAccessControl.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC1155Supply",
+        "IFNFTHandler"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/access/IAccessControl.sol": {
+      "lastModificationDate": 1699124752587,
+      "contentHash": "d279047f9475391c3bd56886890dae91",
+      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1699124752587,
+      "contentHash": "6e07df65bb22ea5ca68b2830da2718a7",
+      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol",
+        "../utils/Context.sol",
+        "../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1699124752587,
+      "contentHash": "e5c392424446b26570ae9d2dc9dc2737",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/TokenVault.sol": {
+      "lastModificationDate": 1699124830060,
+      "contentHash": "c459432bce3e3854ccb4262896e07477",
+      "sourceName": "src/TokenVault.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./RevestSmartWallet.sol",
+        "./interfaces/ITokenVault.sol",
+        "@openzeppelin/contracts/proxy/Clones.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "TokenVault"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/RevestSmartWallet.sol": {
+      "lastModificationDate": 1699124816120,
+      "contentHash": "9ecd9a79ea8feeb9c3ba7dae55ac9d61",
+      "sourceName": "src/RevestSmartWallet.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@solmate/utils/SafeTransferLib.sol",
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+        "forge-std/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "RevestSmartWallet"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/interfaces/ITokenVault.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "b5450bc06b54acbbb1547356921a540d",
+      "sourceName": "src/interfaces/ITokenVault.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IRevest.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ITokenVault"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/proxy/Clones.sol": {
+      "lastModificationDate": 1699124752593,
+      "contentHash": "21dda25fcb50c107516ab3725ebde26a",
+      "sourceName": "@openzeppelin/contracts/proxy/Clones.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Clones"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/solmate/src/utils/SafeTransferLib.sol": {
+      "lastModificationDate": 1699048498224,
+      "contentHash": "0563dad64d8104a8995928b43d405f88",
+      "sourceName": "@solmate/utils/SafeTransferLib.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../tokens/ERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "SafeTransferLib"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/solmate/src/tokens/ERC20.sol": {
+      "lastModificationDate": 1699048498224,
+      "contentHash": "0c7c7ada139062536af09d69d96d395c",
+      "sourceName": "@solmate/tokens/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/Revest_base.sol": {
+      "lastModificationDate": 1699124822963,
+      "contentHash": "5e32f2aa96c07f48df1be0b10cdd90ea",
+      "sourceName": "src/Revest_base.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol",
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+        "@openzeppelin/contracts/interfaces/IERC721.sol",
+        "@openzeppelin/contracts/utils/math/SafeCast.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol",
+        "@solmate/utils/SafeTransferLib.sol",
+        "@solmate/utils/FixedPointMathLib.sol",
+        "./interfaces/IRevest.sol",
+        "./interfaces/ILockManager.sol",
+        "./interfaces/ITokenVault.sol",
+        "./interfaces/IFNFTHandler.sol",
+        "./interfaces/IAllowanceTransfer.sol",
+        "./interfaces/IMetadataHandler.sol",
+        "./interfaces/IControllerExtendable.sol",
+        "./lib/IWETH.sol"
+      ],
+      "versionPragmas": [
+        "<=0.8.19"
+      ],
+      "artifacts": [
+        "Revest_base"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/interfaces/IControllerExtendable.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "24f77f232c774e83938e0be36aa79662",
+      "sourceName": "src/interfaces/IControllerExtendable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IAllowanceTransfer.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IControllerExtendable"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/lib/IWETH.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "34e1bbca2e5f69b7dc8a94e739198e7d",
+      "sourceName": "src/lib/IWETH.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IWETH"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/interfaces/IERC721.sol": {
+      "lastModificationDate": 1699124752590,
+      "contentHash": "9f0e6a9a08199426d1ff22efa5f066cc",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC721/IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": []
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/solmate/src/utils/FixedPointMathLib.sol": {
+      "lastModificationDate": 1699048498224,
+      "contentHash": "3945241174f1c8fdcd51c2571f8ec92e",
+      "sourceName": "@solmate/utils/FixedPointMathLib.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.0"
+      ],
+      "artifacts": [
+        "FixedPointMathLib"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "fe8e6a17354719bc31900c9846012e07",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "453747f2b29269fb57ce5536a178dd0e",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/LockManager_Timelock.sol": {
+      "lastModificationDate": 1699046656337,
+      "contentHash": "467b6fd452923af17ced209828ea0af5",
+      "sourceName": "src/LockManager_Timelock.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "@openzeppelin/contracts/utils/math/SafeCast.sol",
+        "./LockManager_Base.sol",
+        "./lib/DateTime.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "LockManager_Timelock"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/LockManager_Base.sol": {
+      "lastModificationDate": 1699124806173,
+      "contentHash": "74de0d3982c1973a2b2765233c89c4e1",
+      "sourceName": "src/LockManager_Base.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+        "./interfaces/IRevest.sol",
+        "./interfaces/ILockManager.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "forge-std/console2.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "LockManager_Base"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/lib/DateTime.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "ed63ecc66cc6b09c0f98433b3ca8bf7f",
+      "sourceName": "src/lib/DateTime.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "DateTime"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/forge-std/src/console2.sol": {
+      "lastModificationDate": 1699043423407,
+      "contentHash": "491ca717c1915995e78cc361485a3067",
+      "sourceName": "forge-std/console2.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console2"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/lib/PermitHash.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "f45b76cca4a53f0a6c62fd0bc63fc690",
+      "sourceName": "src/lib/PermitHash.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IAllowanceTransfer.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "PermitHash"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/FNFTHandler.sol": {
+      "lastModificationDate": 1699124801013,
+      "contentHash": "d4f88d524911df30f10297194ddfc19f",
+      "sourceName": "src/FNFTHandler.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol",
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+        "@openzeppelin/contracts/token/ERC1155/ERC1155.sol",
+        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+        "@openzeppelin/contracts/access/AccessControl.sol",
+        "./interfaces/IRevest.sol",
+        "./interfaces/IFNFTHandler.sol",
+        "./interfaces/IMetadataHandler.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "FNFTHandler"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "88cb3539203243a09a8bf14ee53e5c01",
+      "sourceName": "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ECDSA"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/Revest_1155.sol": {
+      "lastModificationDate": 1699046656374,
+      "contentHash": "9b9c126b6d63304b7a6644afbd5f5e69",
+      "sourceName": "src/Revest_1155.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./FNFTHandler.sol",
+        "./Revest_base.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Revest_1155"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/LockManager_Addresslock.sol": {
+      "lastModificationDate": 1699046656317,
+      "contentHash": "5244e4930690c392d7fdfc7fa2898500",
+      "sourceName": "src/LockManager_Addresslock.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./LockManager_Base.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "LockManager_Addresslock"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/Revest_721.sol": {
+      "lastModificationDate": 1699046656360,
+      "contentHash": "557f5c8c6e601ebc436a6dfca6668632",
+      "sourceName": "src/Revest_721.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./Revest_base.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "Revest_721"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/Controller.sol": {
+      "lastModificationDate": 1699122242253,
+      "contentHash": "af6e7b82d563cdbc5979eb0a9b0cb506",
+      "sourceName": "src/Controller.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "src/Revest_721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.18"
+      ],
+      "artifacts": [
+        "Controller"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/LotteryVRFv2Consumer.sol": {
+      "lastModificationDate": 1699124683950,
+      "contentHash": "0b330f59de844da1078380c3efcb3303",
+      "sourceName": "src/LotteryVRFv2Consumer.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@chainlink/v0.8/interfaces/VRFCoordinatorV2Interface.sol",
+        "@chainlink/v0.8/vrf/VRFConsumerBaseV2.sol",
+        "@chainlink/v0.8/shared/access/ConfirmedOwner.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "LotteryVRFv2Consumer"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/chainlink-brownie-contracts/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol": {
+      "lastModificationDate": 1699048398837,
+      "contentHash": "4c0aa4a1199644691c779f07e1fec059",
+      "sourceName": "@chainlink/v0.8/interfaces/VRFCoordinatorV2Interface.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "VRFCoordinatorV2Interface"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/chainlink-brownie-contracts/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol": {
+      "lastModificationDate": 1699048398844,
+      "contentHash": "eb9cc526ef59dfc4d644f56ddca0633a",
+      "sourceName": "@chainlink/v0.8/vrf/VRFConsumerBaseV2.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "VRFConsumerBaseV2"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/chainlink-brownie-contracts/contracts/src/v0.8/shared/access/ConfirmedOwner.sol": {
+      "lastModificationDate": 1699048398837,
+      "contentHash": "16d64572b0310127fc8a771e63be6d20",
+      "sourceName": "@chainlink/v0.8/shared/access/ConfirmedOwner.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./ConfirmedOwnerWithProposal.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ConfirmedOwner"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/chainlink-brownie-contracts/contracts/src/v0.8/shared/access/ConfirmedOwnerWithProposal.sol": {
+      "lastModificationDate": 1699048398837,
+      "contentHash": "56723eba6ecc747fee92c5ab5b0bbf7f",
+      "sourceName": "@chainlink/v0.8/shared/access/ConfirmedOwnerWithProposal.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IOwnable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ConfirmedOwnerWithProposal"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/chainlink-brownie-contracts/contracts/src/v0.8/shared/interfaces/IOwnable.sol": {
+      "lastModificationDate": 1699048398837,
+      "contentHash": "b3ae9b7345205a0a65f3e0f89c176d88",
+      "sourceName": "@chainlink/v0.8/shared/interfaces/IOwnable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IOwnable"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/interfaces/IControllerMetadata.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "cd6acab0ac98e4dbd89fa73c56a7707a",
+      "sourceName": "src/interfaces/IControllerMetadata.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IControllerMetadata"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/lib/EIP712.sol": {
+      "lastModificationDate": 1699043405783,
+      "contentHash": "7d78ed63d950920aa69620c9697a4095",
+      "sourceName": "src/lib/EIP712.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "EIP712"
+      ]
+    }
+  }
+}

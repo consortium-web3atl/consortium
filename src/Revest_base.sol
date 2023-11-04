@@ -3,7 +3,7 @@
 pragma solidity <=0.8.19;
 
 import { ERC165Checker } from "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol";
-import { ReentrancyGuard } from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import { IERC721 } from "@openzeppelin/contracts/interfaces/IERC721.sol";
 import { SafeCast } from "@openzeppelin/contracts/utils/math/SafeCast.sol";
 import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
