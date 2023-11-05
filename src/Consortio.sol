@@ -5,10 +5,11 @@ pragma experimental ABIEncoderV2;
 
 import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import {SafeERC20, IERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
-import "@chainlink/contracts/src/v0.8/vrf/VRFConsumerBaseV2.sol";
+import "@chainlink/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
+import "@chainlink/v0.8/vrf/VRFConsumerBaseV2.sol";
+import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Consortio is ReentrancyGuard, VRFConsumerBaseV2 {
+contract Consortio is ReentrancyGuard, VRFConsumerBaseV2, Ownable {
    using SafeERC20 for IERC20;
 
     // VRF Integration
@@ -29,7 +30,7 @@ contract Consortio is ReentrancyGuard, VRFConsumerBaseV2 {
     event LotteryStarted(uint256 indexed requestId);
     event WinnerGenerated(uint256 indexed requestId, uint256 indexed result);
 
-    constructor(uint64 subscriptionId) VRFConsumerBaseV2(vrfCoordinator) {
+    constructor(uint64 subscriptionId) VRFConsumerBaseV2(vrfCoordinator) Ownable(msg.sender) {
         COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
         s_subscriptionId = subscriptionId;
     }
@@ -78,7 +79,7 @@ contract Consortio is ReentrancyGuard, VRFConsumerBaseV2 {
         // Generate a pseudo-random number for testing purpose
     // by hashing the owner's address and the timestamp of the current block
     function getPseudoRandomNumber() public view returns (uint) {
-        return uint(keccak256(abi.encodePacked(contractOwner, block.timestamp)));
+        return uint(keccak256(abi.encodePacked(owner(), block.timestamp)));
     }
 
     function createPool(
@@ -124,12 +125,12 @@ contract Consortio is ReentrancyGuard, VRFConsumerBaseV2 {
         // This chooses the number but we must recall to get results
         // we must choose the winner by number, expose the winner, then allow them to collect
         // address epochWinner = pickWinner();
-        _pickWinner();
+        //_pickWinner();
     }
 
     function collectFNFT(uint _poolId) public returns (address winner) {
         uint epoch = currentEpoch(_poolId);
-        uint randomNum = requestIdToResult(pools[_poolId].epochRequest[epoch]);
+        uint randomNum = requestIdToResult[pools[_poolId].epochRequestId[epoch]];
 
         // todo: if person wins - should be removed before next collection
         uint index = randomNum % pools[_poolId].remainingPlayers.length;
@@ -139,6 +140,8 @@ contract Consortio is ReentrancyGuard, VRFConsumerBaseV2 {
         pools[_poolId].epochWinner[epoch] = winner;
         
         // todo: wrap FNFT with pooled funds -- impovement would be to have seperate pool functions for reentrancy attacks
+        // ERC20.approve(revest, MAX_AMOUNT);
+        // revest.mintAddressLockedNFT();
     }
 
     /**
