@@ -49,3 +49,16 @@ npx hardhat run scripts/mint_nft.ts --network localhost
 # Browser
 -> See latest transaction for token transfer to become visible
 ```
+
+## Deployed contract addresses on Arbitrum Goerli
+
+  
+  - Token Vault: 0x543EF074507F9E96c1c72b7c2E48F784352Bf3D7: 
+  - Lock Manager Timelock: 0x6E81CBBBCb381f78f913dCa330f08Fd3d58C27D1: 
+  - Metadata Handler: 0xcd3B8F0d62C85e89f4e6E0CC661dF23B51A81094: 
+  - Revest 1155: 0x34797cFe2E2c056550D84B06D5F0553299d34622: 
+  - Revest 721: 0xcD230f84d05F6098501Ac2672893989DDc4f1356: 
+  - FNFT Handler: 0xc54C9C72Ad6c5381b857f6e8e778ea859572387c: 
+  - Consortio nft: 0xC2e6F075540f33bE85b9638C7e4230039933C8c6
+  - Lock manager address lock: 0xC7e9702fC3F6306a405A34839e8995F0eB03Bc27
+ - Consortio 0x301C591609962C26F75F838b912D3ea70CF64E52
