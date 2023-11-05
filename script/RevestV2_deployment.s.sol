@@ -5,10 +5,12 @@ import "forge-std/Script.sol";
 import "src/Revest_1155.sol";
 import "src/Revest_721.sol";
 import "src/LockManager_Timelock.sol";
+import "src/LockManager_Addresslock.sol";
 import "src/TokenVault.sol";
 import "src/FNFTHandler.sol";
 import "src/MetadataHandler.sol";
 import "src/Controller.sol";
+import "src/ConsortioNFT.sol";
 
 interface ICREATE3Factory {
     /// @notice Deploys a contract using CREATE3
@@ -47,6 +49,12 @@ contract RevestV2_deployment is Script {
             abi.encodePacked(type(LockManager_Timelock).creationCode, abi.encode(WETH));
         address lockManager_timelock = factory.deploy(keccak256(abi.encode("")), lockManager_creationCode);
 
+        // //Deploy Lock Manager Address lock Contract
+        // bytes memory addressLockManager_creationCode =
+        //     abi.encodePacked(type(LockManager_Addresslock).creationCode, abi.encode(WETH));
+        // address lockManager_addresslock = factory.deploy(keccak256(abi.encode("")), addressLockManager_creationCode);
+        
+
         //Deploy Metadata Handler
         bytes memory MetadataHandler_creationCode =
             abi.encodePacked(type(MetadataHandler).creationCode, abi.encode(URI_BASE_METADATA_HANDLER));
@@ -70,15 +78,22 @@ contract RevestV2_deployment is Script {
         // Consorcio contract
         Controller controller = new Controller(WETH, tokenVault, metadataHandler, govController);
         
+        ConsortioNFT cnft = new ConsortioNFT();
+
+        LockManager_Addresslock addressLock = new  LockManager_Addresslock();
 
         vm.stopBroadcast();
         
         console.log("Token Vault: %s: ", tokenVault);
         console.log("Lock Manager Timelock: %s: ", lockManager_timelock);
+        //console.log("Lock Manager Address lock: %s: ", lockManager_addresslock);
         console.log("Metadata Handler: %s: ", metadataHandler);
         console.log("Revest 1155: %s: ", revest_1155);
         console.log("Revest 721: %s: ", revest_721);
         console.log("FNFT Handler: %s: ", handler);
         console.log("controller: %s", address(controller));
+        console.log("consortio nft: %s", address(cnft));
+        console.log("lock manager address lock: %s", address(addressLock));
+        
     }
 }

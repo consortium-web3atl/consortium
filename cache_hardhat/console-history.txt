@@ -1,3 +1,12 @@
+const nftHandler = await hre.ethers.getContractAtFromArtifact(nftArt, "0xdb00767B46650135D2854BBd4cbd502e6E397E84")
+await hre.ethers.getContractAtFromArtifact(nftArt, "0xdb00767B46650135D2854BBd4cbd502e6E397E84")
+hre.ethers.getContractAtFromArtifact(nftArt, "0xdb00767B46650135D2854BBd4cbd502e6E397E84")
+const nftArt = hre.artifacts.readArtifactSync("FNFTHandler");
+hre.artifacts.readArtifactSync("FNFTHandler1")
+hre.artifacts.readArtifactSync("FNFTHandler")
+a.deal
+const a = require("hardhat-deal");
+import {deal} from "hardhat-deal";
 tokenVaultArt.deployedLinkReferences
 const tokenVaultArt = await hre.artifacts.readArtifactSync("TokenVault");
 await hre.artifacts.readArtifactSync("TokenVault")

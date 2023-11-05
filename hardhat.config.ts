@@ -2,6 +2,7 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "hardhat-preprocessor";
 import "@nomicfoundation/hardhat-foundry";
+import "hardhat-deal";
 import "hardhat-deploy";
 import {config as config_dotenv} from "dotenv";
 config_dotenv();

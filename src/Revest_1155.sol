@@ -5,6 +5,7 @@ pragma solidity ^0.8.19;
 import { FNFTHandler } from "./FNFTHandler.sol";
 
 import "./Revest_base.sol";
+import "forge-std/console.sol";
 
 /**
  * @title Revest_1155
@@ -72,20 +73,23 @@ contract Revest_1155 is Revest_base {
         IRevest.FNFTConfig memory fnftConfig,
         bool usePermit2
     ) internal override returns (uint fnftId, bytes32 lockId) {
+        console.log("entered _mintAddressLock");
         //Get the ID of the next to-be-minted FNFT
         fnftId = fnftHandler.getNextId();
-
+        
         {
             //Salt = kecccak256(fnftID || handler || nonce (which is always zero))
             bytes32 salt = keccak256(abi.encode(fnftId));
 
             //Return the ID of the lock
+            console.log("before create lock");
             lockId = ILockManager(fnftConfig.lockManager).createLock(salt, arguments);
+            console.log("after create lock");
         }
-
+        console.log("before do mint");
         //Stack Too Deep Fixer
         doMint(MintParameters(0, recipients, quantities, depositAmount, fnftId, fnftConfig, usePermit2));
-
+        console.log("after do mint");
         emit FNFTAddressLockMinted(fnftConfig.asset, msg.sender, fnftId, quantities, fnftConfig);
     }
 
@@ -193,6 +197,7 @@ contract Revest_1155 is Revest_base {
     // INTERNAL FUNCTIONS
     //
     function doMint(IRevest.MintParameters memory params) internal {
+        console.log("enter do mint");
         bytes32 salt = keccak256(abi.encode(params.fnftConfig.fnftId));
 
         bool isSingular;

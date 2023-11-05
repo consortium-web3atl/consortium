@@ -7,10 +7,22 @@ import {ReentrancyGuard} from "@openzeppelin/contracts/security/ReentrancyGuard.
 import {SafeERC20, IERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@chainlink/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
 import "@chainlink/v0.8/vrf/VRFConsumerBaseV2.sol";
+import "src/Revest_721.sol";
+import "forge-std/console.sol";
+import "src/interfaces/IController.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Consortio is ReentrancyGuard, VRFConsumerBaseV2, Ownable {
    using SafeERC20 for IERC20;
+
+    // Deterministic addresses for deployment - Revest (see ../deployment_logs.txt)
+    address tokenVault = 0xBd4DA114ac9117E131f101bB8eCd04dBA2aA52B4;
+    address lockManager_timeLock = 0xF26a375FB3907e994D74A868f9212e0168B422E0;
+    address lockManager_addressLock = 0x7543972Be5497AF54bab4fDe333Ffa53b5C52cF2;
+    address metadataHandler = 0x3988f7CFb7baF15b24a62CA3F4336180cF5C1EBe;
+    address revest721 = 0x5e55ceF07BB0ac38ca563f032eaBd780C00D5c4c;
+    address fnftHandler = 0xdb00767B46650135D2854BBd4cbd502e6E397E84;
+    address consortio_nft = 0x26a5BE39521F8e70fEfe14dB40043De82B5B7784;
 
     // VRF Integration
     mapping(uint256 => uint256) public requestIdToResult;
@@ -26,13 +38,15 @@ contract Consortio is ReentrancyGuard, VRFConsumerBaseV2, Ownable {
     uint32 callbackGasLimit = 100000;
     uint16 requestConfirmations = 3;
     uint32 numWords = 1;
-
+    Revest_721 private revest721Controller;
+    
     event LotteryStarted(uint256 indexed requestId);
     event WinnerGenerated(uint256 indexed requestId, uint256 indexed result);
 
-    constructor(uint64 subscriptionId) VRFConsumerBaseV2(vrfCoordinator) Ownable(msg.sender) {
+    constructor(uint64 subscriptionId, Revest_721 _revest721) VRFConsumerBaseV2(vrfCoordinator) Ownable(msg.sender) {
         COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
         s_subscriptionId = subscriptionId;
+        revest721Controller = _revest721;
     }
 
     struct Pool {
@@ -125,7 +139,11 @@ contract Consortio is ReentrancyGuard, VRFConsumerBaseV2, Ownable {
         // This chooses the number but we must recall to get results
         // we must choose the winner by number, expose the winner, then allow them to collect
         // address epochWinner = pickWinner();
-        //_pickWinner();
+        _pickWinner();
+    }
+
+    function _pickWinner() internal {
+        // todo: implement me
     }
 
     function collectFNFT(uint _poolId) public returns (address winner) {
@@ -141,7 +159,30 @@ contract Consortio is ReentrancyGuard, VRFConsumerBaseV2, Ownable {
         
         // todo: wrap FNFT with pooled funds -- impovement would be to have seperate pool functions for reentrancy attacks
         // ERC20.approve(revest, MAX_AMOUNT);
-        // revest.mintAddressLockedNFT();
+        IERC20 erc20 = IERC20(address(pools[_poolId].installmentToken));
+        uint256 allPooledFunds = erc20.balanceOf(address(this));
+        // approve Revest's controller to spend the ERC20 on behalf of pool
+        erc20.approve(address(revest721Controller), type(uint256).max);
+        erc20.safeTransfer(
+            address(revest721Controller),
+            allPooledFunds
+        );
+        // see example here: https://github.com/Revest-Finance/RevestV2-Public/blob/master/test/Revest721.t.sol#L194
+        IController.FNFTConfig memory config = IController.FNFTConfig({
+            handler: consortio_nft,
+            asset: address(erc20),
+            lockManager: lockManager_addressLock,
+            nonce: 0,
+            fnftId: 1,
+            maturityExtension: false
+        });
+        address[] memory recipients = new address[](1);
+        recipients[0] = winner;
+        uint256[] memory amounts = new uint[](1);
+        amounts[0] = 1;
+        (uint id, bytes32 lockId) = revest721Controller.mintAddressLock("", recipients, amounts, allPooledFunds, config); // [1] vault
+        console.log("fnftId %d", id);
+        console.logBytes32(lockId);
     }
 
     /**

@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/gabrielfior/code/RevestV2-Public/src/Consortio.sol": {
-      "lastModificationDate": 1699124792727,
-      "contentHash": "431bd66c5597b21357fafd9431c1fd09",
+      "lastModificationDate": 1699153312420,
+      "contentHash": "fb5cc29eaece9de07c06d8b4dbd99439",
       "sourceName": "src/Consortio.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -37,7 +37,13 @@
       },
       "imports": [
         "@openzeppelin/contracts/security/ReentrancyGuard.sol",
-        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol"
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@chainlink/v0.8/interfaces/VRFCoordinatorV2Interface.sol",
+        "@chainlink/v0.8/vrf/VRFConsumerBaseV2.sol",
+        "src/Revest_721.sol",
+        "forge-std/console.sol",
+        "src/interfaces/IController.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
       ],
       "versionPragmas": [
         "^0.8.19"
@@ -2396,8 +2402,8 @@
       ]
     },
     "/home/gabrielfior/code/RevestV2-Public/src/Revest_1155.sol": {
-      "lastModificationDate": 1699046656374,
-      "contentHash": "9b9c126b6d63304b7a6644afbd5f5e69",
+      "lastModificationDate": 1699143079067,
+      "contentHash": "56d6d6e6011300989686aa3c1e5bd3f1",
       "sourceName": "src/Revest_1155.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2431,7 +2437,8 @@
       },
       "imports": [
         "./FNFTHandler.sol",
-        "./Revest_base.sol"
+        "./Revest_base.sol",
+        "forge-std/console.sol"
       ],
       "versionPragmas": [
         "^0.8.19"
@@ -2441,8 +2448,8 @@
       ]
     },
     "/home/gabrielfior/code/RevestV2-Public/src/LockManager_Addresslock.sol": {
-      "lastModificationDate": 1699046656317,
-      "contentHash": "5244e4930690c392d7fdfc7fa2898500",
+      "lastModificationDate": 1699143265743,
+      "contentHash": "be8ccc0ec13888c53f6d04548040cfe7",
       "sourceName": "src/LockManager_Addresslock.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2475,7 +2482,8 @@
         }
       },
       "imports": [
-        "./LockManager_Base.sol"
+        "./LockManager_Base.sol",
+        "forge-std/console.sol"
       ],
       "versionPragmas": [
         "^0.8.19"
@@ -2485,8 +2493,8 @@
       ]
     },
     "/home/gabrielfior/code/RevestV2-Public/src/Revest_721.sol": {
-      "lastModificationDate": 1699046656360,
-      "contentHash": "557f5c8c6e601ebc436a6dfca6668632",
+      "lastModificationDate": 1699147854560,
+      "contentHash": "b41fa451ba885be1df7cb71d28fe11cb",
       "sourceName": "src/Revest_721.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2519,7 +2527,8 @@
         }
       },
       "imports": [
-        "./Revest_base.sol"
+        "./Revest_base.sol",
+        "forge-std/console.sol"
       ],
       "versionPragmas": [
         "^0.8.19"
@@ -2529,8 +2538,8 @@
       ]
     },
     "/home/gabrielfior/code/RevestV2-Public/src/Controller.sol": {
-      "lastModificationDate": 1699122242253,
-      "contentHash": "af6e7b82d563cdbc5979eb0a9b0cb506",
+      "lastModificationDate": 1699146010113,
+      "contentHash": "16e1a49b2ca78bb498aec9fdbd88d5b0",
       "sourceName": "src/Controller.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2563,6 +2572,7 @@
         }
       },
       "imports": [
+        "src/Revest_1155.sol",
         "src/Revest_721.sol"
       ],
       "versionPragmas": [
@@ -2914,6 +2924,186 @@
       ],
       "artifacts": [
         "EIP712"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "a9661e70f04c2a050833e46fc0c2c958",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol",
+        "./IERC721Receiver.sol",
+        "./extensions/IERC721Metadata.sol",
+        "../../utils/Context.sol",
+        "../../utils/Strings.sol",
+        "../../utils/introspection/ERC165.sol",
+        "../../interfaces/draft-IERC6093.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "6f78cd347e9ab88a4571eba797e6da95",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1699124752597,
+      "contentHash": "5d37465c58c50dd0bde5a20d155df7d4",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "/home/gabrielfior/code/RevestV2-Public/src/ConsortioNFT.sol": {
+      "lastModificationDate": 1699145927523,
+      "contentHash": "c4ceb72b25d86d940ed031473ba573f8",
+      "sourceName": "src/ConsortioNFT.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "ConsortioNFT"
       ]
     }
   }

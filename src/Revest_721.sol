@@ -3,6 +3,7 @@
 pragma solidity ^0.8.19;
 
 import "./Revest_base.sol";
+import "forge-std/console.sol";
 
 /**
  * @title Revest_721
@@ -188,11 +189,13 @@ contract Revest_721 is Revest_base {
         // Create the FNFT and update accounting within TokenVault
         // Now, we move the funds to token vault from the message sender
         address smartWallet = tokenVault.getAddress(WalletSalt, address(this));
+        console.log("smart wallet %s",  smartWallet);
 
         if (msg.value != 0) {
             params.fnftConfig.asset = ETH_ADDRESS;
             IWETH(WETH).deposit{value: msg.value}(); //Convert it to WETH and send it back to this
             IWETH(WETH).transfer(smartWallet, msg.value); //Transfer it to the smart wallet
+            
         } else if (params.usePermit2) {
             PERMIT2.transferFrom(msg.sender, smartWallet, (params.depositAmount).toUint160(), params.fnftConfig.asset);
         } else {

@@ -3,6 +3,7 @@
 pragma solidity ^0.8.19;
 
 import "./LockManager_Base.sol";
+import "forge-std/console.sol";
 
 /**
  * @title LockManager_Addresslock
@@ -14,6 +15,7 @@ contract LockManager_Addresslock is LockManager_Base {
     constructor() LockManager_Base() {}
 
     function createLock(bytes32 salt, bytes calldata) external override nonReentrant returns (bytes32 lockId) {
+        console.log("entered create lock addresslock");
         lockId = keccak256(abi.encode(salt, msg.sender));
 
         // Extensive validation on creation
